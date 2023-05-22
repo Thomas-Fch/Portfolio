@@ -12,11 +12,10 @@ function Burger({ open, setOpen }) {
           onClick={() => setOpen(!open)}
         />
         <ul className="burgerUl">
-          <li >HOME</li>
-          <li >ABOUT ME</li>
-          <li >PROJECTS</li>
-          <li onClick={() => navigate("<Contact />")}>CONTACT</li>
-          {/* <li onClick={() => navigate("/mentions")}>MENTIONS LEGALES</li> */}
+          <li ><a href="#hero" onClick={() => setOpen(!open)}>HOME</a></li>
+          <li ><a href="#about" onClick={() => setOpen(!open)}>ABOUT ME</a></li>
+          <li ><a href="#project" onClick={() => setOpen(!open)}>PROJECTS</a></li>
+          <li ><a href="#contact" onClick={() => setOpen(!open)}>CONTACT</a></li>
         </ul>
       </div>
     );

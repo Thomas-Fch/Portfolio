@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="wrapper" id="white">
+    <div className="wrapper" id="about">
 
     <div className="textSection">
       <h2>ABOUT ME</h2>

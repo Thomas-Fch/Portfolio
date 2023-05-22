@@ -11,11 +11,9 @@ $color-dark: #2b2f32;
 $color-softDark: #3d3d3d;
 $color-purple: #89416e;
 $color-grey: #f4f4f4;
+$color-white: #ffffff;
 $font-stack: "Inter", sans-serif;
 
-// html{
-//     scroll-behavior: smooth;
-// }
 html,
 body {
   scroll-behavior: smooth;
@@ -32,6 +30,7 @@ body {
 /* -------------------------------------------------------------------------- */
 
 .navbar {
+  position: fixed;
   width: 100vw;
   background-color: #ffffff;
   display: flex;
@@ -72,11 +71,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li {
-      font-size: 26px;
-      color: $color-dark;
-      font-weight: 600;
+    li{
       margin: 1.5rem;
+      a {
+       font-size: 26px;
+       color: $color-dark;
+       font-weight: 600;
+     }
     }
   }
 }
@@ -102,12 +103,6 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                              PAGES STRUCTURE                               */
 /* -------------------------------------------------------------------------- */
-#white {
-  background-color: #ffffff;
-}
-#grey {
-  background-color: $color-grey;
-}
 
 #pointer{
   cursor: pointer;
@@ -165,25 +160,31 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                                   HERO                                     */
 /* -------------------------------------------------------------------------- */
+ #hero{
+  background-color: $color-grey;
 
-.profilePicture {
-  margin-top: 2rem;
-  width: 265px;
-  border-radius: 100%;
-  border: solid 12px #89416e;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 15px;
-}
+   .profilePicture {
+     margin-top: 5rem;
+     width: 265px;
+     border-radius: 100%;
+     border: solid 12px #89416e;
+   }
+   
+   .skills {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     grid-column-gap: 20px;
+     grid-row-gap: 15px;
+   }
+ }
 
 /* -------------------------------------------------------------------------- */
 /*                                 PORTFOLIO                                  */
 /* -------------------------------------------------------------------------- */
+
+#portfolio{
+background-color: $color-grey;
 
 .projectCard {
   width: 75vw;
@@ -207,10 +208,10 @@ footer {
     width: 3.5rem;
     height: 1.5rem;
     margin: 1rem;
-    // background-color: red;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
   }
+}
 }
 
 /* -------------------------------------------------------------------------- */

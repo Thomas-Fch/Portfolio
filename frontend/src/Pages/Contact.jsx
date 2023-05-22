@@ -1,7 +1,7 @@
 import ScrollToTop from "../Components/ScrollToTop";
 function Contact() {
   return (
-    <div className="wrapper" id="white">
+    <div className="wrapper" id="contact">
       <div id="contact" className="textSection">
         <h2>CONTACT</h2>
         <figure>

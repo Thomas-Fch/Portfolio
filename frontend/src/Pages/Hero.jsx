@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className="wrapper" id="grey">
+    <div className="wrapper" id="hero">
       <img src="frontend\src\assets\photos\photo.jpg" alt="thomas Fachinetti photo" className="profilePicture"/>
       <div className="textSection">
         <h1>Front-End React Developper</h1>
