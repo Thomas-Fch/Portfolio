@@ -1,3 +1,4 @@
+import Contact from "../Pages/Contact";
 function Burger({ open, setOpen }) {
     return (
       <div
@@ -14,7 +15,7 @@ function Burger({ open, setOpen }) {
           <li >HOME</li>
           <li >ABOUT ME</li>
           <li >PROJECTS</li>
-          <li >CONTACT</li>
+          <li onClick={() => navigate("<Contact />")}>CONTACT</li>
           {/* <li onClick={() => navigate("/mentions")}>MENTIONS LEGALES</li> */}
         </ul>
       </div>

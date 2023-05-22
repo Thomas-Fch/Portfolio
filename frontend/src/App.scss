@@ -8,11 +8,17 @@
 }
 
 $color-dark: #2b2f32;
+$color-softDark: #3d3d3d;
 $color-purple: #89416e;
 $color-grey: #f4f4f4;
 $font-stack: "Inter", sans-serif;
 
-html, body {
+// html{
+//     scroll-behavior: smooth;
+// }
+html,
+body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -20,8 +26,6 @@ body {
   position: relative;
   font-family: $font-stack;
 }
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                                   NAVBAR                                   */
@@ -84,7 +88,7 @@ body {
 footer {
   background-color: $color-dark;
   width: 100vw;
-  height: 2rem;
+  height: 2.5rem;
   text-align: center;
   color: $color-grey;
   font-weight: 700;
@@ -98,45 +102,64 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                              PAGES STRUCTURE                               */
 /* -------------------------------------------------------------------------- */
-#white{
-background-color: #ffffff;
+#white {
+  background-color: #ffffff;
 }
-#grey{
+#grey {
   background-color: $color-grey;
 }
-.wrapper{
-  padding: 4rem 0 4rem 0;
+
+#pointer{
+  cursor: pointer;
+}
+.wrapper {
+  padding: 1rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: $color-dark;
 
-  .textSection{
-      width: 75vw;
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      h1{
-        margin-bottom: 1rem;
-      }
-      h2{
-        margin-bottom: 0.5rem;
-        font-size: 28px;
-          color: $color-purple;
-      }
-      h3{
-        margin: 1rem 0 0.5rem 0;
-        font-size: 24px;
-      }
-      p {
-        margin: 0.75rem 0 1rem 0;
-      }
-      span {
-        border-bottom: solid 2px $color-dark;
-      }
+  .textSection {
+    width: 75vw;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 28px;
+      color: $color-purple;
+    }
+    h3 {
+      margin: 1rem 0 0.5rem 0;
+      font-size: 24px;
+    }
+    p {
+      margin: 0.75rem 0 1rem 0;
+    }
+    span {
+      border-bottom: solid 2px $color-dark;
+    }
+  }
+  .textSection figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
+    img {
+      width: 32px;
+    }
   }
 }
 /* -------------------------------------------------------------------------- */
@@ -144,6 +167,7 @@ background-color: #ffffff;
 /* -------------------------------------------------------------------------- */
 
 .profilePicture {
+  margin-top: 2rem;
   width: 265px;
   border-radius: 100%;
   border: solid 12px #89416e;
@@ -158,33 +182,44 @@ background-color: #ffffff;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                   CONTACT                                  */
-/* -------------------------------------------------------------------------- */
-
-
-.wrapper{
-  figure{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-    background-color: #ffffff;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
-    img {
-      width: 32px;
-    }
-  } 
-}
-
-/* -------------------------------------------------------------------------- */
 /*                                 PORTFOLIO                                  */
 /* -------------------------------------------------------------------------- */
 
-.projectCard{
-
-border-radius: 0px ;
+.projectCard {
+  width: 75vw;
+  height: 25rem;
+  margin-top: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    p {
+      color: $color-softDark;
+      width: 90%;
+    }
+  }
+  .softUsed{
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+    // background-color: red;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+ .goUp{
+  transition: 500ms;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  width: 45px;
+ }

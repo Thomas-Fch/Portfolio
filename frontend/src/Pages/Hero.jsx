@@ -1,12 +1,11 @@
 function Hero() {
   return (
     <div className="wrapper" id="grey">
-      <img src="frontend\src\assets\logos\photo.jpg" alt="thomas Fachinetti photo" className="profilePicture"/>
+      <img src="frontend\src\assets\photos\photo.jpg" alt="thomas Fachinetti photo" className="profilePicture"/>
       <div className="textSection">
         <h1>Front-End React Developper</h1>
         <p>Hi, I'm Thomas Fachinetti. A passionate gamer and developper, based in Paris, France. 📍</p>
       <span>Hard Skills</span>
-      </div>
       <div className="skills"> 
 <figure>
     <img src="frontend\src\assets\logos\HTML.png" alt="html logo"/>
@@ -48,14 +47,15 @@ MYSQL
     <img src="frontend\src\assets\logos\photoshop.png" alt="photoshop logo"/>
     {/* <figcaption>
 PS
-    </figcaption> */}
+</figcaption> */}
 </figure>
 <figure>
     <img src="frontend\src\assets\logos\figma.png" alt="figma logo"/>
     {/* <figcaption>
 FIGMA
-    </figcaption> */}
+</figcaption> */}
 </figure>
+</div>
       </div>
     </div>
   );

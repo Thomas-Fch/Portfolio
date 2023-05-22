@@ -1,3 +1,4 @@
+import ScrollToTop from "../Components/ScrollToTop";
 function Contact() {
   return (
     <div className="wrapper" id="white">
@@ -9,11 +10,12 @@ function Contact() {
         <h3>mail</h3>
         <p>thomas.fachinetti@gmail.com</p>
         <figure>
-          <img src="frontend\src\assets\logos\linkedin.png" alt="linkedin logo" />
+          <img id="pointer" src="frontend\src\assets\logos\linkedin.png" alt="linkedin logo" onClick={() => window.open("https://www.linkedin.com/in/thomas-fachinetti/")}/>
         </figure>
         <h3>linkedin</h3>
-        <p>https://www.linkedin.com/in/thomas-fachinetti/</p>
+        <p id="pointer" onClick={() => window.open("https://www.linkedin.com/in/thomas-fachinetti/")}>https://www.linkedin.com/in/thomas-fachinetti/</p>
       </div>
+      <ScrollToTop/>
     </div>
   );
 }
