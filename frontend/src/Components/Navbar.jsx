@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Burger from "./Burger.jsx";
+import Burger from "./Burger";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -7,7 +7,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <h2>Thomas.Fch</h2>
-      <img className="menu" src="frontend\src\assets\logos\menu.png" onClick={() => setOpen(!open)} alt="menu_icon" />
+      <button type="button" onClick={() => setOpen(!open)}>
+        <img className="menu" src="frontend\src\assets\logos\menu.png" alt="menu_icon" />
+      </button>
       <Burger open={open} setOpen={setOpen} />
     </nav>
   );

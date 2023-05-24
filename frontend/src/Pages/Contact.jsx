@@ -1,6 +1,8 @@
+import ScrollToTop from "../Components/ScrollToTop";
+
 function Contact() {
   return (
-    <div className="wrapper" id="white">
+    <div className="wrapper" id="contact">
       <div id="contact" className="textSection">
         <h2>CONTACT</h2>
         <figure>
@@ -9,11 +11,16 @@ function Contact() {
         <h3>mail</h3>
         <p>thomas.fachinetti@gmail.com</p>
         <figure>
-          <img src="frontend\src\assets\logos\linkedin.png" alt="linkedin logo" />
+          <a href="https://www.linkedin.com/in/thomas-fachinetti/" target="_blank" rel="noreferrer">
+            <img className="pointer" src="frontend\src\assets\logos\linkedin.png" alt="linkedin logo" />
+          </a>
         </figure>
         <h3>linkedin</h3>
-        <p>https://www.linkedin.com/in/thomas-fachinetti/</p>
+        <a href="https://www.linkedin.com/in/thomas-fachinetti/" target="_blank" rel="noreferrer">
+          <p>https://www.linkedin.com/in/thomas-fachinetti/</p>
+        </a>
       </div>
+      <ScrollToTop />
     </div>
   );
 }
