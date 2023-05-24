@@ -2,52 +2,20 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "plugin:prettier/recommended"],
+  extends: ["airbnb", "airbnb/hooks", "eslint:recommended", "plugin:react/recommended"],
+  overrides: [],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "import"],
+  plugins: ["react"],
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "auto",
-      },
-    ],
-    "no-console": "off",
-    "no-restricted-syntax": [
-      "error",
-      {
-        selector: "CallExpression[callee.object.name='console'][callee.property.name!=/^(error|warn|info)$/]",
-        message: "You can only call the error(), warn() and info() methods from the console object",
-      },
-    ],
+    "max-len": ["error", { code: 120 }],
+    quotes: "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
-    "jsx-a11y/label-has-associated-control": [
-      "error",
-      {
-        assert: "either",
-      },
-    ],
-  },
-  settings: {
-    "import/resolver": {
-      "eslint-import-resolver-custom-alias": {
-        alias: {
-          "@assets": "./src/assets",
-          "@components": "./src/components",
-          "@pages": "./src/pages",
-          "@services": "./src/services",
-        },
-        extensions: [".js", ".jsx"],
-      },
-    },
   },
 };

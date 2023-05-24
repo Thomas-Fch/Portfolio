@@ -21,8 +21,8 @@ body {
 }
 
 body {
-  position: relative;
   font-family: $font-stack;
+  position: relative;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -30,6 +30,7 @@ body {
 /* -------------------------------------------------------------------------- */
 
 .navbar {
+  z-index: 1;
   position: fixed;
   width: 100vw;
   background-color: #ffffff;
@@ -37,6 +38,10 @@ body {
   align-items: center;
   filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.25));
   padding: 0.25rem;
+  button{
+    display: flex;
+    align-items: center;
+  }
   img {
     width: 25px;
   }
@@ -45,15 +50,10 @@ body {
     font-size: 22px;
     margin: 0.5rem;
   }
-  .cross {
-    top: 3%;
-    right: 5%;
-    position: absolute;
-    width: 35px;
-  }
   .menu {
     position: absolute;
     right: 5%;
+    cursor: pointer;
   }
 }
 
@@ -63,6 +63,13 @@ body {
   top: 0%;
   height: 100vh;
   transition: 500ms;
+  .cross {
+    top: 3%;
+    right: 5%;
+    position: absolute;
+    width: 35px;
+    cursor: pointer;
+  }
   .burgerUl {
     background-color: #ffffff;
     height: 100vh;
@@ -71,13 +78,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li{
+    li {
       margin: 1.5rem;
       a {
-       font-size: 26px;
-       color: $color-dark;
-       font-weight: 600;
-     }
+        font-size: 26px;
+        color: $color-dark;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -104,7 +111,8 @@ footer {
 /*                              PAGES STRUCTURE                               */
 /* -------------------------------------------------------------------------- */
 
-#pointer{
+a,
+button {
   cursor: pointer;
 }
 .wrapper {
@@ -135,10 +143,15 @@ footer {
       font-size: 24px;
     }
     p {
+      font-size: 18px;
       margin: 0.75rem 0 1rem 0;
     }
     span {
       border-bottom: solid 2px $color-dark;
+    }
+    a {
+      display: flex;
+      color: $color-dark;
     }
   }
   .textSection figure {
@@ -160,67 +173,105 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                                   HERO                                     */
 /* -------------------------------------------------------------------------- */
- #hero{
+#hero {
   background-color: $color-grey;
+  .myProfil{
+  display: flex;
+  margin: 1rem 0 2rem 0;  
+  }
+  .downloadCV {
+    background-color: $color-purple;
+    color: $color-white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    border-radius: 50px;
+  }
+  .myGitHub {
+    width: 30px;
+  }
+  .profilePicture {
+    margin-top: 5rem;
+    width: 265px;
+    border-radius: 100%;
+    border: solid 12px #89416e;
+  }
 
-   .profilePicture {
-     margin-top: 5rem;
-     width: 265px;
-     border-radius: 100%;
-     border: solid 12px #89416e;
-   }
-   
-   .skills {
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     grid-template-rows: repeat(2, 1fr);
-     grid-column-gap: 20px;
-     grid-row-gap: 15px;
-   }
- }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                 PORTFOLIO                                  */
 /* -------------------------------------------------------------------------- */
 
-#portfolio{
-background-color: $color-grey;
+#portfolio {
+  background-color: $color-grey;
+  p {
+    font-size: 18px;
+    color: $color-softDark;
+  }
 
-.projectCard {
-  width: 75vw;
-  height: 25rem;
-  margin-top: 2rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-  figcaption {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    p {
-      color: $color-softDark;
-      width: 90%;
+  .projectCard {
+    width: 75vw;
+    height: 25rem;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    img {
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.25));
+      width: 85%;
+    }
+    h3 {
+      margin: 1rem 0 1rem 0;
+      font-size: 24px;
+    }
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+      p {
+        width: 90%;
+      }
+    }
+    .softUsed {
+      display: inline-block;
+      width: 3.5rem;
+      height: 1.5rem;
+      margin: 1rem;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+    }
+    .toLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        border-radius: 0;
+        margin: 0 0.5rem 0 0.25rem;
+        width: 20px;
+      }
     }
   }
-  .softUsed{
-    display: inline-block;
-    width: 3.5rem;
-    height: 1.5rem;
-    margin: 1rem;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-}
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                   CONTACT                                  */
 /* -------------------------------------------------------------------------- */
- .goUp{
+.goUp {
+  cursor: pointer;
   transition: 500ms;
   position: absolute;
-  bottom: 3%;
+  bottom: 2%;
   right: 5%;
   width: 45px;
- }
+}
