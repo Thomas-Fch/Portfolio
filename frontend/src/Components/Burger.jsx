@@ -33,6 +33,6 @@ function Burger({ open, setOpen }) {
 }
 Burger.propTypes = {
   open: PropTypes.bool.isRequired,
-  setOpen: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };
 export default Burger;
