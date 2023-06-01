@@ -1,9 +1,10 @@
 import React from "react";
+import AboutPicutre from "../assets/photos/about_me_photo.jpg";
 
 function About() {
   return (
     <section id="about" className="wrapper">
-      <img src="frontend\src\assets\photos\about_me_photo.jpg" alt="thomas Fachinetti" />
+      <img src={AboutPicutre} alt="thomas Fachinetti" />
       <div className="textSection">
         <h2>ABOUT ME</h2>
         <p>
