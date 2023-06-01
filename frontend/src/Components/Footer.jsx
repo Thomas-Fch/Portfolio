@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <span>Copyright © 2023. All right are reserved</span>
+      <p>Copyright © 2023. All right are reserved</p>
     </footer>
   );
 }
