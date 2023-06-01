@@ -1,10 +1,11 @@
 import { skillsIcons } from "../Constants/Index";
+import ProfilePicutre from "../assets/photos/photo.jpg";
 
 function Hero() {
   return (
     <section id="hero" className="wrapper">
       <div className="hero-main">
-        <img src="frontend\src\assets\photos\photo.jpg" alt="thomas Fachinetti" className="profilePicture" />
+        <img src={ProfilePicutre} alt="thomas Fachinetti" className="profilePicture" />
         <div className="textSection">
           <h1>Front-End React Developper</h1>
           <p>Hi, I'm Thomas Fachinetti. A passionate gamer and developper, based in Paris, France. 📍</p>
