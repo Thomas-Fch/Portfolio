@@ -1,3 +1,5 @@
+import GoUp from "../assets/logos/up.png";
+
 function ScrollToTop() {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0 });
@@ -5,7 +7,7 @@ function ScrollToTop() {
 
   return (
     <button type="button" onClick={handleScrollToTop} className="pointer">
-      <img id="pointer" className="goUp" src="frontend\src\assets\logos\up.png" alt="scrollToTop" />
+      <img id="pointer" className="goUp" src={GoUp} alt="scrollToTop" />
     </button>
   );
 }
