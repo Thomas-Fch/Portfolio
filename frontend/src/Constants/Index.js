@@ -53,7 +53,7 @@ const projects = [
     skill01: "React",
     skill02: "SCSS",
     github: "https://github.com/Alexandre78R/CV-Hermione",
-    figma: "https://www.figma.com/file/Oj4Mv7yG8CeWSUVMoFh3xQ/save?type=design&node-id=0%3A1&t=cev3UVoZtELMrRiB-1",
+    figma: "https://www.figma.com/file/XWKHvNo7pwO9Py0WVaeaPU/PokemonLite?type=design&t=bxIYUtNxSDs7S26K-1",
     live: "",
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     name: "C.V Hermione",
     description: "Had to make a CV for a fictional character.You will know more about her, his skills and career",
     skill01: "HTML",
-    skill02: "JS",
+    skill02: "JavaScript",
     github: "https://github.com/Alexandre78R/CV-Hermione",
     figma: "https://www.figma.com/file/Oj4Mv7yG8CeWSUVMoFh3xQ/save?type=design&node-id=0%3A1&t=cev3UVoZtELMrRiB-1",
     live: "https://alexandre78r.github.io/CV-Hermione/",

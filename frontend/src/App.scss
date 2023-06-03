@@ -14,6 +14,16 @@ $color-grey: #f4f4f4;
 $color-white: #ffffff;
 $font-stack: "Inter", sans-serif;
 
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+$textColor: #2B3338;
+$bgColor: #A6B8B1;
+$accentColor: #E8D6C1;
+
 html,
 body {
   scroll-behavior: smooth;
@@ -117,7 +127,6 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                              PAGES STRUCTURE                               */
 /* -------------------------------------------------------------------------- */
-
 a,
 li,
 button {
@@ -125,7 +134,6 @@ button {
 }
 .wrapper {
   padding: 4.5rem 1rem;
-  max-width: 105rem;
   color: $color-dark;
   h1 {
     font-size: 40px;
@@ -146,6 +154,9 @@ button {
     padding: 0.75rem;
     border-radius: 100%;
     box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
+    :hover{
+      filter: brightness(90%);
+    }
     img {
       width: 35px;
     }
@@ -181,10 +192,6 @@ button {
     }
     span {
       display: flex;
-      // a img{
-      //   width: 30px;
-      //   height: 30px;
-      // }
     }
   }
 
@@ -197,7 +204,9 @@ button {
     border-radius: 50px;
     margin: 1rem 0 1.5rem 0;
   }
-
+.downloadCV:hover{
+filter: brightness(90%);
+}
   .skills {
     display: flex;
     flex-direction: column;
@@ -279,10 +288,10 @@ button {
       flex-direction: column;
       align-content: center;
       flex-wrap: wrap;
-      justify-content: center;
+      align-items: center;
       gap: 1rem;
       p {
-        width: 90%;
+        padding: 0 1.5rem;
       }
     }
     .softUsedContainer{
@@ -300,6 +309,7 @@ button {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 1.5rem;
       margin-bottom: 1.5rem;
       img {
         border-radius: 0;
@@ -318,6 +328,13 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
+  button{
+    height: 32px;
+    background: none;
+  }
+   p:hover{
+color: $color-purple;
+}
   a {
     color: $color-softDark;
   }
@@ -330,6 +347,7 @@ button {
   .contactInfo {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
   .contactIcons {
@@ -341,7 +359,7 @@ button {
     figure {
       display: flex;
       background-color: #ffffff;
-      padding: 0.75rem;
+      padding: 1rem;
       border-radius: 100%;
       box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
       img {
@@ -357,6 +375,33 @@ button {
   bottom: 2.5%;
   right: 5%;
   width: 45px;
+}
+
+.contactIcon-box{
+  position: relative;
+}
+strong {
+  position: absolute;
+  display: flex;
+  bottom: 30%;
+  left: 35%;
+  transition: all 500ms;
+  opacity: 0;
+  padding: 0.5rem;
+  background-color: $color-purple;
+  color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+strong:after {
+  transform: rotate(135deg);
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -5px;
+  left: 44%;
+  background: $color-purple;
 }
 
 @media screen and (min-width: 926px) {
@@ -467,7 +512,7 @@ button {
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                                  PORJECT                                   */
+  /*                                  PROJECT                                   */
   /* -------------------------------------------------------------------------- */
 
   #project {
@@ -479,9 +524,6 @@ button {
       }
       figcaption{
         justify-content: space-around;
-        p{
-          width: 70%;
-        }
       }
       .card_row_reversed{
         flex-direction: row-reverse;
@@ -493,7 +535,7 @@ button {
       .toLink{
         margin: 0;
         img{
-          width: 22px;
+          width: 25px;
         }
       }
     }
@@ -508,14 +550,95 @@ button {
     .contactIcon-box {
       flex-direction: row;
     }
+    .contactInfo{
+      align-items: flex-start;
+    }
     .contactIcons {
       flex-direction: row;
     }
     .goUp {
       bottom: 5%;
-    }
-    .goUp {
       width: 55px;
     }
+    .goUp:hover{
+      width: 60px;
+    }
+    strong {
+      position: absolute;
+      display: flex;
+      bottom: 50%;
+      left: 50%;
+    }
   }
+}
+
+.aboutPicture{
+  position: relative;
+}
+.link {
+  position: absolute;
+  bottom: -10%;
+  right: -20%;
+	width: 10rem;
+	// height: 50rem;
+	display: inline-block;
+	font: 300 1.55rem/1.4 "Josefin Sans"; 
+	text-transform: uppercase;
+	letter-spacing: 0.1175em;
+	word-spacing: 0.3em;
+	text-decoration: none;
+
+	&__svg {
+		width: 100%;
+		height: auto;
+		transform-box: fill-box;
+		fill: $textColor;
+		stroke: $textColor;
+		stroke-width: 0.05em;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	&__cloud {
+		transform-origin: 50% 50%;
+		animation: rotate normal infinite 3 * $rotationDuration linear;
+		fill: rgb(255, 255, 255);
+	}
+
+	&__face {
+		transform-origin: 50% 50%;
+		transition: transform $hoverDuration / 2 $easeIn;
+
+		.link:hover & {
+			transform: scale(1.1);
+			transition: transform $hoverDuration $easeOut;
+		}
+	}
+
+	&__text {
+		animation: rotateReverse normal infinite $rotationDuration linear;
+		transform-origin: 50% 50%;
+
+		.link:hover & {
+			animation-play-state: paused;
+		}
+	}
+
+	&--alt {
+		font-size: 1.15rem;
+		letter-spacing: 0;
+		word-spacing: 0;
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateReverse {
+	to {
+		transform: rotate(-360deg);
+	}
 }
