@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import Cross from "../assets/logos/croix.png";
 
 function Burger({ open, setOpen }) {
   return (
-    <div className="menuBurger" style={open ? { right: "0%" } : { right: "-100%" }}>
+    <div className="menuBurger" style={{ right: open ? "0%" : "-100%" }}>
       <button type="button" onClick={() => setOpen(!open)}>
-        <img src="frontend\src\assets\logos\croix.png" alt="cross" className="cross" />
+        <img src={Cross} alt="cross" className="cross" />
       </button>
       <ul className="burgerUl">
         <li>
