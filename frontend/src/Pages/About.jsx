@@ -12,10 +12,11 @@ function About() {
       <div className="textSection">
         <h2>ABOUT ME</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel felis ac lectus volutpat interdum.
-          Suspendisse pretium, erat ut pretium tristique, arcu eros euismod nulla, sit amet efficitur purus leo ac
-          lorem. Nam non erat quis mi rutrum mattis. Suspendisse pretium, erat ut pretium tristique, arcu eros euismod
-          nulla, sit amet efficitur purus leo ac lorem.
+          I am a passionate front-end web developer with a quick learning ability for languages and tools. My background
+          in the art field as a concept artist has provided me with a strong artistic vision, allowing me to bring a
+          unique aesthetic touch to my projects, especially when designing mockups. My insatiable curiosity drives me to
+          always want to learn more about the languages and frameworks used. Today, I am ready to put my versatility and
+          skills at the service of your projects!
         </p>
       </div>
     </section>

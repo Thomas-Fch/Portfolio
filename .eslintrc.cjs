@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "max-len": ["error", { code: 150 }],
+    "max-len": ["error", { code: 200 }],
     quotes: "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",

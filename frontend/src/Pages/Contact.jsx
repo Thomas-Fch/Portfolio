@@ -2,7 +2,7 @@ import { useState } from "react";
 import ScrollToTop from "../Components/ScrollToTop";
 import Mail from "../assets/logos/courriel.png";
 import Linkedin from "../assets/logos/linkedin.png";
-import RevealText from "../Constants/RevealText";
+import RevealText from "../Components/RevealText";
 
 function Contact() {
   const [textToCopy] = useState("thomas.fachinetti@gmail.com");
