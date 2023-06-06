@@ -28,14 +28,14 @@ function AnimationCircle() {
 
         <g className="link__face">
           <path d="M 95 102 Q 100 107 105 102" fill="none" />
-          <ellipse className="" cx="90" cy="100" rx="2" ry="2" stroke="none" />
-          <ellipse className="" cx="110" cy="100" rx="2" ry="2" stroke="none" />
-          <ellipse className="" cx="100" cy="100" rx="35" ry="35" fill="none" />
+          <ellipse cx="90" cy="100" rx="2" ry="2" stroke="none" />
+          <ellipse cx="110" cy="100" rx="2" ry="2" stroke="none" />
+          <ellipse cx="100" cy="100" rx="35" ry="35" fill="none" />
         </g>
 
         <text className="link__text">
           <textPath href="#link-circle-alt" stroke="none">
-            • you are wonderful • take this ♥ ♥ ♥ ♥ ♥
+            • glad to see you here • have a nice day
           </textPath>
         </text>
       </svg>

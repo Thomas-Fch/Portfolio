@@ -8,6 +8,7 @@ import Ps from "../assets/logos/photoshop.png";
 import Figma from "../assets/logos/figma.png";
 import PokemonLite from "../assets/photos/pokemonLite.png";
 import Hermione from "../assets/photos/hermione.png";
+import Portfolio from "../assets/photos/portfolio.png";
 
 const skillsIcons = [
   {
@@ -45,6 +46,17 @@ const skillsIcons = [
 ];
 const projects = [
   {
+    className: "card_row_reversed",
+    img: Portfolio,
+    name: "My portfolio",
+    description:
+      "My website, where you can find out more about me. I took the opportunity to experiment with several things and try to get the code clean and readable.",
+    skill01: "React",
+    skill02: "SCSS",
+    github: "https://github.com/Thomas-Fch/Portfolio",
+    live: "https://thomas-fachinetti-webdev-portfolio.netlify.app",
+  },
+  {
     className: "card_row",
     img: PokemonLite,
     name: "PokemonLite",
@@ -52,7 +64,7 @@ const projects = [
       "A Pokemon web site that allows users to experiment an easier journey in Pokemon with automatize battle.",
     skill01: "React",
     skill02: "SCSS",
-    github: "https://github.com/Alexandre78R/CV-Hermione",
+    github: "",
     figma: "https://www.figma.com/file/XWKHvNo7pwO9Py0WVaeaPU/PokemonLite?type=design&t=bxIYUtNxSDs7S26K-1",
     live: "",
   },

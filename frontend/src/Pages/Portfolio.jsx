@@ -4,7 +4,7 @@ import { projects } from "../Constants/Index";
 import Github from "../assets/logos/github.png";
 import Figma from "../assets/logos/figma.png";
 import Live from "../assets/logos/Golive.png";
-import RevealText from "../Constants/RevealText";
+import RevealText from "../Components/RevealText";
 
 function Portfolio() {
   const ref = useRef(null);
@@ -51,15 +51,21 @@ function Portfolio() {
                 <p>{project.skill02}</p>
               </div>
               <div className="toLink">
-                <a href={project.github} target="_blank" rel="noreferrer">
-                  <img src={Github} alt="github logo" />
-                </a>
-                <a href={project.figma} target="_blank" rel="noreferrer">
-                  <img src={Figma} alt="figma logo" />
-                </a>
-                <a href={project.live} target="_blank" rel="noreferrer">
-                  <img src={Live} alt="figma logo" />
-                </a>
+                {project.github ? (
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    <img src={Github} alt="github logo" />
+                  </a>
+                ) : null}
+                {project.figma ? (
+                  <a href={project.figma} target="_blank" rel="noreferrer">
+                    <img src={Figma} alt="figma logo" />
+                  </a>
+                ) : null}
+                {project.live ? (
+                  <a href={project.live} target="_blank" rel="noreferrer">
+                    <img src={Live} alt="figma logo" />
+                  </a>
+                ) : null}
               </div>
             </figcaption>
           </figure>
