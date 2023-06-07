@@ -168,6 +168,16 @@ button {
   text-align: center;
   gap: 1rem;
 }
+.reavealText{
+  position: relative;
+  overflow: hidden;
+  block-size: fit-content;
+}
+.reavealTextBis{
+  position: relative;
+  block-size: fit-content;
+  overflow: visible;
+}
 /* -------------------------------------------------------------------------- */
 /*                                   HERO                                     */
 /* -------------------------------------------------------------------------- */
