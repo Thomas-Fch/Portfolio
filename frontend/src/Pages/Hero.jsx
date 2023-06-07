@@ -28,7 +28,7 @@ function Hero() {
         <div className="skills">
           <span>Hard Skills</span>
           <div className="logo">
-            <RevealText style={{ overflow: "visible" }}>
+            <RevealText overflow={1}>
               <ul>
                 {skillsIcons.map((icon) => (
                   <li key={icon.name}>

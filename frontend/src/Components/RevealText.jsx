@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import PropTypes from "prop-types";
 
-function RevealText({ children, width = "fit-content" }) {
+function RevealText({ overflow, children }) {
   const mainControls = useAnimation();
   const slideControls = useAnimation();
 
@@ -18,9 +18,8 @@ function RevealText({ children, width = "fit-content" }) {
       mainControls.start("hidden");
     }
   }, [isInView, mainControls, slideControls]);
-
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} className={overflow === 1 ? "reavealTextBis" : "reavealText"}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -55,6 +54,6 @@ function RevealText({ children, width = "fit-content" }) {
 }
 RevealText.propTypes = {
   children: PropTypes.func.isRequired,
-  width: PropTypes.func.isRequired,
+  overflow: PropTypes.func.isRequired,
 };
 export default RevealText;
