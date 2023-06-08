@@ -9,6 +9,7 @@ import Figma from "../assets/logos/figma.png";
 import PokemonLite from "../assets/photos/pokemonLite.png";
 import Hermione from "../assets/photos/hermione.png";
 import Portfolio from "../assets/photos/portfolio.png";
+import makeSense from "../assets/photos/makeSense.png";
 
 const skillsIcons = [
   {
@@ -46,6 +47,19 @@ const skillsIcons = [
 ];
 const projects = [
   {
+    className: "card_row",
+    img: makeSense,
+    name: "MakeSense",
+    wip: true,
+    description:
+      "final project for my graduation, I'm in charge of the mockup and front-end. It will be a website for interns to manage projects.",
+    skill01: "React",
+    skill02: "Express",
+    github: "https://github.com/WildCodeSchool/0223-paris-js-p3-makesense-server",
+    figma:
+      "https://www.figma.com/file/nieWYZZWBCxN5xRX8nm0c2/MakeSense?type=design&node-id=43%3A80&t=rS3WkyrNrgstsVsx-1",
+  },
+  {
     className: "card_row_reversed",
     img: Portfolio,
     name: "My portfolio",
@@ -60,6 +74,7 @@ const projects = [
     className: "card_row",
     img: PokemonLite,
     name: "PokemonLite",
+    wip: true,
     description:
       "A Pokemon web site that allows users to experiment an easier journey in Pokemon with automatize battle.",
     skill01: "React",

@@ -42,6 +42,7 @@ function Portfolio() {
             <figcaption>
               <RevealText>
                 <h3>{project.name}</h3>
+                {project.wip ? <span>W.I.P</span> : null}
               </RevealText>
               <RevealText>
                 <p>{project.description}</p>
