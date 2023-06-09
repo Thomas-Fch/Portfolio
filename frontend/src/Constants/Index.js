@@ -6,8 +6,10 @@ import Sass from "../assets/logos/sass.svg";
 import Mysql from "../assets/logos/sql.png";
 import Ps from "../assets/logos/photoshop.png";
 import Figma from "../assets/logos/figma.png";
-import PokemonLite from "../assets/photos/pokemonLite.png";
+import Tailwind from "../assets/logos/Tailwind_CSS_Logo.svg.png";
+import TypeScript from "../assets/logos/typescript-2.svg";
 import Hermione from "../assets/photos/hermione.png";
+import PokemonLite from "../assets/photos/pokemonLite.png";
 import Portfolio from "../assets/photos/portfolio.png";
 import makeSense from "../assets/photos/makeSense.png";
 
@@ -21,16 +23,24 @@ const skillsIcons = [
     name: "CSS",
   },
   {
+    img: Sass,
+    name: "SASS",
+  },
+  {
+    img: Tailwind,
+    name: "Tailwind",
+  },
+  {
     img: Js,
     name: "JS",
   },
   {
-    img: ReactImg,
-    name: "REACT",
+    img: TypeScript,
+    name: "TypeScript",
   },
   {
-    img: Sass,
-    name: "SASS",
+    img: ReactImg,
+    name: "REACT",
   },
   {
     img: Mysql,
