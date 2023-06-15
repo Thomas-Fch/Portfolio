@@ -1,0 +1,77 @@
+@use "../global" as *;
+
+$rotationDuration: 20s;
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 14rem;
+      margin-bottom: 3rem;
+      border-radius: 10px;
+    }
+    .aboutPicture{
+      position: relative;
+    }
+    .link {
+      position: absolute;
+      bottom: -10%;
+      right: -15%;
+      width: 10rem;
+      font: 300 1.55rem/1.4 "Josefin Sans"; 
+      text-transform: uppercase;
+    
+      &__svg {
+        width: 100%;
+        transform-box: fill-box;
+        fill: $text-softDark;
+        stroke: $text-softDark;
+        stroke-width: 0.05em;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      &__cloud {
+        transform-origin: 50% 50%;
+        animation: rotate normal infinite 3 * $rotationDuration linear;
+        fill: rgb(255, 255, 255);
+      }
+    
+      &__text {
+        animation: rotateReverse normal infinite $rotationDuration linear;
+        transform-origin: 50% 50%;
+      }
+    
+      &--alt {
+        font-size: 1.15rem;
+      }
+    }
+    
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes rotateReverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 926px) {
+
+
+    #about {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5rem;
+        img {
+          height: 18rem;
+        }
+      }
+  }
+

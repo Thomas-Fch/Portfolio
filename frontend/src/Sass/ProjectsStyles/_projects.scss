@@ -1,0 +1,97 @@
+@use "../global" as *;
+
+#project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $bg-grey;
+
+  .projectCard {
+    width: 75vw;
+    height: fit-content;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    span {
+      text-decoration: underline;
+      font-size: 18px;
+      font-weight: 600;
+      color: $color-accent;
+    }
+    img {
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.25));
+      width: 85%;
+      object-fit: cover;
+    }
+    h3 {
+      margin: 1rem 0 1rem 0;
+      font-size: 24px;
+    }
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      p {
+        padding: 0 1.5rem;
+      }
+    }
+    .softUsedContainer {
+      display: flex;
+      p {
+        font-size: 16px;
+        padding: 0.25rem;
+        margin: 1rem;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        font-weight: 600;
+      }
+    }
+    .toLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-bottom: 1.5rem;
+      img {
+        border-radius: 0;
+        margin: 0 0.5rem 0 0.25rem;
+        width: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 926px) {
+  #project {
+    .projectCard {
+      width: 70vw;
+      figure {
+        padding: 2rem;
+        display: flex;
+      }
+      figcaption {
+        justify-content: space-around;
+      }
+      .card_row_reversed {
+        flex-direction: row-reverse;
+      }
+      img {
+        margin: 0;
+        width: 35rem;
+      }
+      .toLink {
+        margin: 0;
+        img {
+          width: 28px;
+        }
+      }
+    }
+  }
+}
