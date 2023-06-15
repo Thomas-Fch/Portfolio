@@ -1,0 +1,109 @@
+@use "../global" as *;
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  button {
+    height: 32px;
+    background: none;
+  }
+  p:hover {
+    color: $color-accent;
+  }
+  a {
+    color: $text-softDark;
+  }
+  .contactIcon-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .contactIcons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+    figure {
+      display: flex;
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 100%;
+      box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
+      img {
+        width: 32px;
+      }
+    }
+  }
+}
+.goUp {
+  cursor: pointer;
+  transition: 500ms;
+  position: absolute;
+  bottom: 1.75%;
+  right: 5%;
+  width: 45px;
+}
+
+.contactIcon-box {
+  position: relative;
+}
+strong {
+  position: absolute;
+  display: flex;
+  bottom: 30%;
+  left: 35%;
+  transition: all 500ms;
+  opacity: 0;
+  padding: 0.5rem;
+  background-color: $color-accent;
+  color: $bg-white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+strong:after {
+  transform: rotate(135deg);
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -5px;
+  left: 44%;
+  background: $color-accent;
+}
+
+@media screen and (min-width: 926px) {
+  #contact {
+    text-align: start;
+    .contactIcon-box {
+      flex-direction: row;
+    }
+    .contactInfo {
+      align-items: flex-start;
+    }
+    .contactIcons {
+      flex-direction: row;
+    }
+    .goUp {
+      bottom: 5%;
+      width: 55px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    strong {
+      position: absolute;
+      display: flex;
+      bottom: 50%;
+      left: 50%;
+    }
+  }
+}
