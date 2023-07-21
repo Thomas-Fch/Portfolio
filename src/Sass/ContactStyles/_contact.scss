@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  
   button {
     height: 32px;
     background: none;
@@ -11,7 +12,7 @@
   p:hover {
     color: $color-accent;
   }
-  a {
+  a, p {
     color: $text-softDark;
   }
   .contactIcon-box {
@@ -80,7 +81,8 @@ strong:after {
   background: $color-accent;
 }
 
-@media screen and (min-width: 926px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   #contact {
     text-align: start;
     .contactIcon-box {

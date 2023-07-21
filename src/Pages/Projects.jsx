@@ -4,7 +4,6 @@ import { projects } from "../Constants/Index";
 import Github from "../assets/logos/github.png";
 import Figma from "../assets/logos/figma.png";
 import Live from "../assets/logos/Golive.png";
-import RevealText from "../Components/RevealText";
 
 function Portfolio() {
   const ref = useRef(null);
@@ -40,16 +39,13 @@ function Portfolio() {
           <figure className={project.className}>
             <img src={project.img} alt={project.name} />
             <figcaption>
-              <RevealText>
-                <h3>{project.name}</h3>
-                {project.wip ? <span>W.I.P</span> : null}
-              </RevealText>
-              <RevealText>
-                <p>{project.description}</p>
-              </RevealText>
+              <h3>{project.name}</h3>
+              {project.wip ? <span>W.I.P</span> : null}
+              <p>{project.description}</p>
               <div className="softUsedContainer">
-                <p>{project.skill01}</p>
-                <p>{project.skill02}</p>
+                {project.skills.map((data) => (
+                  <p key={data.id}>{data}</p>
+                ))}
               </div>
               <div className="toLink">
                 {project.github ? (

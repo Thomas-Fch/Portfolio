@@ -16,7 +16,8 @@ footer {
   }
 }
 
-@media screen and (min-width: 926px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   footer {
     height: 5rem;
     p {
