@@ -6,12 +6,13 @@ import Sass from "../assets/logos/sass.svg";
 import Mysql from "../assets/logos/sql.png";
 import Ps from "../assets/logos/photoshop.png";
 import Figma from "../assets/logos/figma.png";
-import Tailwind from "../assets/logos/Tailwind_CSS_Logo.svg.png";
+// import Tailwind from "../assets/logos/Tailwind_CSS_Logo.svg.png";
 import TypeScript from "../assets/logos/typescript-2.svg";
 import Hermione from "../assets/photos/hermione.png";
-import PokemonLite from "../assets/photos/pokemonLite.png";
+// import PokemonLite from "../assets/photos/pokemonLite.png";
 import Portfolio from "../assets/photos/portfolio.png";
 import makeSense from "../assets/photos/makeSense.png";
+import emmaus from "../assets/photos/emmaus.png";
 
 const skillsIcons = [
   {
@@ -26,10 +27,10 @@ const skillsIcons = [
     img: Sass,
     name: "SASS",
   },
-  {
-    img: Tailwind,
-    name: "Tailwind",
-  },
+  // {
+  //   img: Tailwind,
+  //   name: "Tailwind",
+  // },
   {
     img: Js,
     name: "JS",
@@ -57,17 +58,27 @@ const skillsIcons = [
 ];
 const projects = [
   {
-    className: "card_row",
+    className: "card_row_reversed",
     img: makeSense,
     name: "MakeSense",
     wip: true,
     description:
-      "final project for my graduation, I'm in charge of the mockup and front-end. It will be a website for interns to manage projects.",
-    skill01: "React",
-    skill02: "Express",
-    github: "https://github.com/WildCodeSchool/0223-paris-js-p3-makesense-server",
+      "Final project for my graduation, I'm in charge of the mockup and front-end. It will be a website for interns to manage projects.",
+    skills: ["React", "Redux", "Express"],
+    github: "https://github.com/WildCodeSchool/0223-paris-js-p3-makesense-client/tree/main",
     figma:
       "https://www.figma.com/file/nieWYZZWBCxN5xRX8nm0c2/MakeSense?type=design&node-id=43%3A80&t=rS3WkyrNrgstsVsx-1",
+  },
+  {
+    className: "card_row",
+    img: emmaus,
+    name: "Emmaüs Connect",
+    wip: true,
+    description:
+      "Started as an hackaton but i decided to push the developpement. The goal is too determine prices for phones, save in a DB and for an user, being able to offer old phones.",
+    skills: ["React", "Express"],
+    figma:
+      "https://www.figma.com/file/yBb3xKzOCypM0HGgHCb1bx/Emmaus-Connect?type=design&mode=design&t=0o2O3BrGEflm4g5v-1",
   },
   {
     className: "card_row_reversed",
@@ -75,31 +86,29 @@ const projects = [
     name: "My portfolio",
     description:
       "My website, where you can find out more about me. I took the opportunity to experiment with several things and try to get the code clean and readable.",
-    skill01: "React",
-    skill02: "SCSS",
+    skills: ["React", "Scss"],
     github: "https://github.com/Thomas-Fch/Portfolio",
     live: "https://thomas-fachinetti-webdev-portfolio.netlify.app",
   },
+  // {
+  //   className: "card_row",
+  //   img: PokemonLite,
+  //   name: "PokemonLite",
+  //   wip: true,
+  //   description:
+  //     "A Pokemon web site that allows users to experiment an easier journey in Pokemon with automatize battle.",
+  //   skill01: "React",
+  //   skill02: "SCSS",
+  //   github: "",
+  //   figma: "https://www.figma.com/file/XWKHvNo7pwO9Py0WVaeaPU/PokemonLite?type=design&t=bxIYUtNxSDs7S26K-1",
+  //   live: "",
+  // },
   {
     className: "card_row",
-    img: PokemonLite,
-    name: "PokemonLite",
-    wip: true,
-    description:
-      "A Pokemon web site that allows users to experiment an easier journey in Pokemon with automatize battle.",
-    skill01: "React",
-    skill02: "SCSS",
-    github: "",
-    figma: "https://www.figma.com/file/XWKHvNo7pwO9Py0WVaeaPU/PokemonLite?type=design&t=bxIYUtNxSDs7S26K-1",
-    live: "",
-  },
-  {
-    className: "card_row_reversed",
     img: Hermione,
     name: "C.V Hermione",
     description: "Had to make a CV for a fictional character.You will know more about her, his skills and career",
-    skill01: "HTML",
-    skill02: "JavaScript",
+    skills: ["HTML", "JavaScript"],
     github: "https://github.com/Alexandre78R/CV-Hermione",
     figma: "https://www.figma.com/file/Oj4Mv7yG8CeWSUVMoFh3xQ/save?type=design&node-id=0%3A1&t=cev3UVoZtELMrRiB-1",
     live: "https://alexandre78r.github.io/CV-Hermione/",
