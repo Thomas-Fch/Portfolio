@@ -62,10 +62,9 @@ const projects = [
     img: makeSense,
     name: "MakeSense",
     wip: true,
-    description:
-      "Final project for my graduation, I'm in charge of the mockup and front-end. It will be a website for interns to manage projects.",
+    description: "An intranet to promote projects within the company, subject to employee votes",
     skills: ["React", "Redux", "Express"],
-    github: "https://github.com/WildCodeSchool/0223-paris-js-p3-makesense-client/tree/main",
+    github: "https://github.com/WildCodeSchool/0223-paris-js-p3-makesense-client/tree/projectview",
     figma:
       "https://www.figma.com/file/nieWYZZWBCxN5xRX8nm0c2/MakeSense?type=design&node-id=43%3A80&t=rS3WkyrNrgstsVsx-1",
   },
@@ -75,10 +74,12 @@ const projects = [
     name: "Emmaüs Connect",
     wip: true,
     description:
-      "Started as an hackaton but i decided to push the developpement. The goal is too determine prices for phones, save in a DB and for an user, being able to offer old phones.",
+      " A website that offers to donate your old smartphones and offer them for sale at low prices for those who have little means",
     skills: ["React", "Express"],
     figma:
       "https://www.figma.com/file/yBb3xKzOCypM0HGgHCb1bx/Emmaus-Connect?type=design&mode=design&t=0o2O3BrGEflm4g5v-1",
+    github: "https://github.com/Thomas-Fch/Emmaus_connect/tree/main",
+    live: "https://emmaus-connect.netlify.app",
   },
   {
     className: "card_row_reversed",
